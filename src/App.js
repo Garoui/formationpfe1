@@ -20,13 +20,16 @@ function App() {
   ];
   //4
 function getData(data){
-return data
-}
+return data}
+  //5
+//const count = 0
+const [count , setCount] = useState(0)
+const [text, setText] = useState("text ")  
+return (
 
-  return (
     <div className="App">
       <header className="App-header">
-         N1 {name}
+         {/* N1 {name}
         N2 {element}
         N3 {etudiant.nom} | {etudiant.prenom} | {etudiant.age}
         <br />
@@ -43,6 +46,11 @@ return data
         <br/>
         N6
         <Hello etudiant={etudiant}></Hello>
+      <hr/> */}
+      numero : {count}
+      <button onClick={() => {setCount(count + 1 )}}> click </button>
+      text : {text}
+      <input onChange ={(e) => { setText (e.target.value) }} ></input>
       </header>
     </div>
   );
