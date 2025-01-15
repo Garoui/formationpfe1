@@ -17,7 +17,10 @@ function App() {
     { nom: "aziz", prenom: "ben foulen", age: 10, id: 2 },
     { nom: "yomna", prenom: "agrbaoui", age: 1, id: 3 },
   ];
+  //4
+function getData(data){
 
+}
 
   return (
     <div className="App">
@@ -27,10 +30,14 @@ function App() {
         {etudiant.nom} | {etudiant.prenom} | {etudiant.age}
         <br />
         {listetudiant.map(function (item) {
-          return <div key={item.id}>{item.nom} |{item.prenom} |{item.age} </div>
-        }
-        )}
-        function
+          return(
+             <div key={item.id}>
+          {" "}
+          {item.nom} | {item.prenom} | {item.age}{" "}
+          </div>
+          );
+    })}
+        {getData("slm")}
         <Hello abir="karoui"></Hello>
       </header>
     </div>
