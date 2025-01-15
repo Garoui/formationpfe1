@@ -1,9 +1,10 @@
 import React from 'react'
 
 export default function Hello(props) {
-  return (
+  console.log(props)
+    return (
     <div>
-      hello {props.abir}
+      hello <h1>{props.etudiant.nom} |   {props.etudiant.prenom} |  {props.etudiant.age}</h1>
     </div>
   )
 }
