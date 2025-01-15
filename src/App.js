@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import Hello from './Composant/Hello';
+import React , {useState , useEffect} from 'react';
 function App() {
   //javascript
   //1
@@ -19,17 +20,17 @@ function App() {
   ];
   //4
 function getData(data){
-
+return data
 }
 
   return (
     <div className="App">
       <header className="App-header">
-        {name}
-        {element}
-        {etudiant.nom} | {etudiant.prenom} | {etudiant.age}
+         N1 {name}
+        N2 {element}
+        N3 {etudiant.nom} | {etudiant.prenom} | {etudiant.age}
         <br />
-        {listetudiant.map(function (item) {
+         N4 {listetudiant.map(function (item) {
           return(
              <div key={item.id}>
           {" "}
@@ -37,8 +38,11 @@ function getData(data){
           </div>
           );
     })}
+    N5<br/>
         {getData("slm")}
-        <Hello abir="karoui"></Hello>
+        <br/>
+        N6
+        <Hello etudiant={etudiant}></Hello>
       </header>
     </div>
   );
