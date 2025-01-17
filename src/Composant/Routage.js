@@ -1,11 +1,18 @@
-import React from 'react'
+import React , {lazy} from 'react'
 import { Route , Routes } from 'react-router-dom'
-import Navbar from './Navbar';
-import Home from './Home'
+
 import Footer from './Footer';
-import Hello from './Hello';
-import App from '../App';
-import Erreur from './Erreur';
+import Navbar from './Navbar';
+
+// import Home from './Home';
+// import Hello from './Hello';
+// import App from '../App';
+// import Erreur from './Erreur';
+const Home = lazy(() => import ('./Home'));
+const Hello = lazy(() => import ('./Hello'));
+const Erreur = lazy(() => import ('./Erreur'));
+const App = lazy(() => import ('../App'));
+
 export default function Routage() {
   return (
     <div>
